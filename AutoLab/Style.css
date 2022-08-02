@@ -1,0 +1,115 @@
+﻿body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #072A3E;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+}
+
+.azul {
+    width: 100%;
+    height: 50px;
+    background: #00B1F1;
+    position: relative;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+}
+
+.preto {
+    width: 100%;
+    height: 30px;
+    background: #000;
+    position: relative;
+}
+
+
+#titulo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#DetailsView1 {
+    margin-bottom: 50px;
+    margin-left: 225px;
+    max-width: 50px;
+    vertical-align: unset;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form {
+    max-width: 700px;
+    width: 100%;
+    border: solid;
+    background: white;
+    height: 610px;
+}
+
+.registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line1 {
+    padding-top: 24px;
+    padding-bottom: 13px;
+    margin-right: 10px;
+}
+
+    .line1 label {
+        margin-right: 50px;
+        margin-left: 140px;
+    }
+.text1 .textbox1 {
+    margin-right: 26px;
+    margin-left: 100px;    
+} 
+.text1{
+    padding-bottom: 24px;
+}
+.line2 {
+    padding-top: 24px;
+    padding-bottom: 13px;
+    margin-right: 10px;
+}
+    .line2 label {
+        margin-right: 30px;
+        margin-left: 120px;
+    }
+.text2 .textbox2 {
+    margin-right: -20px;
+    margin-left: 50px;
+}
+.text2 {
+    padding-bottom: 24px;
+}
+.button1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    margin-right: 50px;
+}
+#lbResultado {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    margin-right: 50px;
+}
+.text3{
+    padding:24px;
+}

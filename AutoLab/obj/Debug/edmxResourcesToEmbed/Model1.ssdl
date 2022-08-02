@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutoLabModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sucursal">
+    <Key>
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdSucursal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreSucursal" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LogoSucursal" Type="varchar(max)" Nullable="false" />
+    <Property Name="DireccionSucursal" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelefonoSucursal" Type="int" Nullable="false" />
+    <Property Name="DescripcionSucursal" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AutoLabModelStoreContainer">
+    <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

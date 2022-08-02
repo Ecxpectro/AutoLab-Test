@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutoLabModelStoreContainer" CdmEntityContainer="AutoLabEntities">
+    <EntitySetMapping Name="Sucursal">
+      <EntityTypeMapping TypeName="AutoLabModel.Sucursal">
+        <MappingFragment StoreEntitySet="Sucursal">
+          <ScalarProperty Name="IdSucursal" ColumnName="IdSucursal" />
+          <ScalarProperty Name="NombreSucursal" ColumnName="NombreSucursal" />
+          <ScalarProperty Name="LogoSucursal" ColumnName="LogoSucursal" />
+          <ScalarProperty Name="DireccionSucursal" ColumnName="DireccionSucursal" />
+          <ScalarProperty Name="TelefonoSucursal" ColumnName="TelefonoSucursal" />
+          <ScalarProperty Name="DescripcionSucursal" ColumnName="DescripcionSucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
