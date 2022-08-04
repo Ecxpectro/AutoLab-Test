@@ -1,4 +1,8 @@
-﻿body {
+﻿* {
+    font-family: Arial;
+}
+
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -10,27 +14,19 @@ header {
     width: 100%;
 }
 
-.azul {
+.menu {
     width: 100%;
-    height: 50px;
-    background: #00B1F1;
-    position: relative;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 25px;
+    width: 80px;
 }
-
-.preto {
-    width: 100%;
-    height: 30px;
-    background: #000;
-    position: relative;
-}
-
 
 #titulo {
     font-size: 20px;
@@ -48,68 +44,153 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .form {
     max-width: 700px;
     width: 100%;
-    border: solid;
+    border: 2px solid #fff;
     background: white;
-    height: 610px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 16px;
+    padding: 24px;
+    padding-bottom: 32px;
 }
 
 .registro {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bolder;
+    padding: 10px 0;
+    font-size: 24px;
 }
 
-.line1 {
-    padding-top: 24px;
-    padding-bottom: 13px;
-    margin-right: 10px;
+.formContent {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
 }
 
-    .line1 label {
-        margin-right: 50px;
-        margin-left: 140px;
-    }
-.text1 .textbox1 {
-    margin-right: 26px;
-    margin-left: 100px;    
-} 
-.text1{
-    padding-bottom: 24px;
+.line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
-.line2 {
-    padding-top: 24px;
-    padding-bottom: 13px;
-    margin-right: 10px;
-}
-    .line2 label {
-        margin-right: 30px;
-        margin-left: 120px;
-    }
-.text2 .textbox2 {
-    margin-right: -20px;
-    margin-left: 50px;
-}
-.text2 {
-    padding-bottom: 24px;
-}
+
 .button1 {
     display: flex;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-    margin-right: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
 }
-#lbResultado {
+
+#btnRegistrar {
+    color: #fff;
+    padding: 12px 24px;
+    background-color: #00B2F1;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 50px rgba(42, 46, 67, 0.1);
+}
+
+
+.selectBox {
     display: flex;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-    margin-right: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
-.text3{
-    padding:24px;
+
+label {
+    font-weight: bold;
+}
+
+img {
+    width: 40px;
+}
+
+table tr td, th {
+    border: 1px solid #e6e6e6;
+    width: 30px;
+    margin: 0;
+    max-width: 180px;
+    word-wrap: break-word;
+    max-height: 10px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 50px rgba(42, 46, 67, 0.1);
+}
+
+th:first-child{
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+tr td {
+    padding: 8px;
+}
+tr td:nth-child(3){
+    text-align: center;
+}
+tr th td {
+    max-width: 50px;
+}
+
+tr .encabezamiento {
+    font-weight: bold;
+}
+
+.tablehead {
+    background-color: #00B1F1;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+tr th {
+    padding: 5px 10px;
+}
+
+.textbox {
+    border-radius: 8px;
+    height: 40px;
+    border: 1px solid #bababa;
+    font-size: 16px;
+    padding-left: 16px;
+    box-shadow: 0px 4px 50px rgba(42, 46, 67, 0.1);
+}
+
+#Dropdownlist1 {
+    border-radius: 8px;
+    height: 40px;
+    border: 1px solid #bababa;
+    font-size: 16px;
+    gap: 8px;
+    padding: 0 4px;
+    display: flex;
+    box-shadow: 0px 4px 50px rgba(42, 46, 67, 0.1);
 }

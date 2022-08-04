@@ -11,57 +11,75 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <div class="Azul">
+            <div class="menu">
                 <img class="logo" src="LogoAutoLab.png" alt="Alternate Text" />
-
-                <div class="preto"></div>
             </div>
 
         </header>
         <section>
             <div class="form">
                 <label class="registro">Registro de sucursal</label>
-
-                <div class="line1">
-                    <label>Nombre Sucursal:</label>
-                    <label>Descripcion:</label>
+                <div class="formContent">
+                    <div class="line">
+                        <label>Nombre Sucursal:</label>
+                        <asp:TextBox CssClass="textbox" ID="txtNombreSucursal" runat="server" />
+                    </div>
+                    <div class="line">
+                        <label>Descripcion:</label>
+                        <asp:TextBox CssClass="textbox" ID="txtDescripcionSucursal" runat="server" />
+                    </div>
                 </div>
-                <div class="text1">
-                    <asp:TextBox CssClass="textbox1" ID="txtNombreSucursal" runat="server" />
-                    <asp:TextBox CssClass="textbox1" ID="txtDescripcionSucursal" runat="server" />
-                </div>
-                <div class="line2">
-                    <label>Logo:</label>
-                    <label>Direccion:</label>
-                    <label>Telefono:</label>
-                </div>
-                <div class="text2">
-                    <asp:TextBox CssClass="textbox2" ID="txtLogoSucursal" runat="server" />
-                    <asp:TextBox CssClass="textbox2" ID="txtDireccionSucursal" runat="server" />
-                    <asp:TextBox CssClass="textbox2" ID="txtTelefonoSucursal" runat="server" />
+                <div class="formContent">
+                    <div class="line">
+                        <label>Logo:</label>
+                        <asp:TextBox CssClass="textbox" ID="txtLogoSucursal" runat="server" />
+                    </div>
+                    <div class="line">
+                        <label>Direccion:</label>
+                        <asp:TextBox CssClass="textbox" ID="txtDireccionSucursal" runat="server" />
+                    </div>
+                    <div class="line">
+                        <label>Telefono:</label>
+                        <asp:TextBox CssClass="textbox" ID="txtTelefonoSucursal" runat="server" />
+                    </div>
                 </div>
                 <div class="button1">
                     <asp:Button ID="btnRegistrar" runat="server" OnClick="btnRegistrar_Click"
                         Text="Registrar"></asp:Button>
+                    <asp:Label ID="lbResultado" runat="server"></asp:Label>
                 </div>
-                <asp:Label ID="lbResultado" runat="server"></asp:Label>
-                <div class="text3">
+
+                <div class="selectBox">
                     <label>Selecione Sucursal</label>
-                    <br />
-                    <br />
                     <asp:DropDownList ID="Dropdownlist1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Dropdownlist1_SelectedIndexChanged"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyConnection %>" SelectCommand="SELECT DISTINCT [NombreSucursal], [LogoSucursal], [DescripcionSucursal], [TelefonoSucursal], [DireccionSucursal], [IdSucursal] FROM [Sucursal]"></asp:SqlDataSource>
                 </div>
-                <asp:DetailsView ID="DetailsView1" runat="server" Height="16px" Width="247px"  CellPadding="4" ForeColor="#333333" GridLines="Horizontal" RowStyle-HorizontalAlign="Left">
-                    <AlternatingRowStyle  BackColor="White" ForeColor="#284775" />
-                    <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
-                    <EditRowStyle BackColor="#999999" />
-                    <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle CssClass="tabela" BackColor="#F7F6F3" ForeColor="#333333" />
-                </asp:DetailsView>
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr class="tablehead">
+                                <th class="encabezamiento">ID</th>
+                                <th class="encabezamiento">Nombre</th>
+                                <th class="encabezamiento">Logo</th>
+                                <th class="encabezamiento">Direccion</th>
+                                <th class="encabezamiento">Telefono</th>
+                                <th class="encabezamiento">Descripcion</th>
+                            </tr>
+                        </thead>
+                        <asp:Repeater ID="Repeater" runat="server">
+                            <ItemTemplate>
+                                <tr>
+                                    <td><%# Eval("IdSucursal") %></td>
+                                    <td><%# Eval("NombreSucursal") %></td>
+                                    <td><%# Eval("LogoSucursal") %></td>
+                                    <td><%# Eval("DireccionSucursal") %></td>
+                                    <td><%# Eval("TelefonoSucursal") %></td>
+                                    <td><%# Eval("DescripcionSucursal") %></td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </table>
+                </div>
             </div>
         </section>
     </form>

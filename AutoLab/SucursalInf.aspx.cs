@@ -41,6 +41,16 @@ namespace AutoLab
                 sqlconn.Close();
             }
         }
+        public static System.Drawing.Image LoadBase64(string base64)
+        {
+            byte[] bytes = Convert.FromBase64String(base64);
+            System.Drawing.Image imagem;
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                imagem = System.Drawing.Image.FromStream(ms);
+            }
+            return imagem;
+        }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -81,13 +91,14 @@ namespace AutoLab
             }
             else
             {
+            
 
                 Sucursal objSucursal = new Sucursal();
                 objSucursal.NombreSucursal = txtNombreSucursal.Text;
-                objSucursal.LogoSucursal = txtLogoSucursal.Text;
+                objSucursal.LogoSucursal = $"<img src= data:image/png;base64,{txtLogoSucursal.Text}>";
                 objSucursal.DireccionSucursal = txtDireccionSucursal.Text;
                 objSucursal.TelefonoSucursal = Convert.ToInt32(txtTelefonoSucursal.Text);
-                objSucursal.DescripcionSucursal = txtDescripcionSucursal.Text;                   
+                objSucursal.DescripcionSucursal = txtDescripcionSucursal.Text;
                 SucursalDal suDal = new SucursalDal();
                 suDal.RegistrarSucursal(objSucursal);
                 string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
@@ -125,8 +136,8 @@ namespace AutoLab
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            DetailsView1.DataSource = dt;
-            DetailsView1.DataBind();
+            Repeater.DataSource = dt;
+            Repeater.DataBind();
             sqlconn.Close();
         }
     }

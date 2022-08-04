@@ -11,14 +11,20 @@ namespace AutoLab
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    using System.Drawing;
     
-    public partial class Sucursal
+    public partial class Sucursal 
     {
         public int IdSucursal { get; set; }
         public string NombreSucursal { get; set; }
-        public string LogoSucursal { get; set; }
+        public string LogoSucursal { get; set; } 
+
         public string DireccionSucursal { get; set; }
         public int TelefonoSucursal { get; set; }
-        public string DescripcionSucursal { get; set; }
+        public string DescripcionSucursal { get; set; }    
+      
     }
+
 }
