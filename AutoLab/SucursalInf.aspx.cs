@@ -41,17 +41,6 @@ namespace AutoLab
                 sqlconn.Close();
             }
         }
-        public static System.Drawing.Image LoadBase64(string base64)
-        {
-            byte[] bytes = Convert.FromBase64String(base64);
-            System.Drawing.Image imagem;
-            using (MemoryStream ms = new MemoryStream(bytes))
-            {
-                imagem = System.Drawing.Image.FromStream(ms);
-            }
-            return imagem;
-        }
-
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (txtNombreSucursal.Text == "")

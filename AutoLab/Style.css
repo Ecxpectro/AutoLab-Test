@@ -23,7 +23,6 @@ header {
     justify-content: center;
 }
 
-
 .logo {
     width: 80px;
 }
@@ -100,7 +99,6 @@ section {
     box-shadow: 0px 4px 50px rgba(42, 46, 67, 0.1);
 }
 
-
 .selectBox {
     display: flex;
     flex-direction: column;
@@ -140,9 +138,11 @@ th:first-child{
 th:last-child {
     border-top-right-radius: 8px;
 }
+
 tbody tr:last-child td:first-child {
     border-bottom-left-radius: 8px;
 }
+
 tbody tr:last-child td:last-child {
     border-bottom-right-radius: 8px;
 }
@@ -150,9 +150,11 @@ tbody tr:last-child td:last-child {
 tr td {
     padding: 8px;
 }
+
 tr td:nth-child(3){
     text-align: center;
 }
+
 tr th td {
     max-width: 50px;
 }
