@@ -18,32 +18,32 @@
         </header>
         <section>
             <div class="form">
-                <label class="registro">Registro de sucursal</label>
+                <label class="title">Registro de sucursal</label>
                 <div class="formContent">
                     <div class="line">
                         <label>Nombre Sucursal:</label>
-                        <asp:TextBox CssClass="textbox" ID="txtNombreSucursal" runat="server" />
+                        <asp:TextBox CssClass="textInput" ID="txtNombreSucursal" runat="server" />
                     </div>
                     <div class="line">
                         <label>Descripcion:</label>
-                        <asp:TextBox CssClass="textbox" ID="txtDescripcionSucursal" runat="server" />
+                        <asp:TextBox CssClass="textInput" ID="txtDescripcionSucursal" runat="server" />
                     </div>
                 </div>
                 <div class="formContent">
                     <div class="line">
                         <label>Logo:</label>
-                        <asp:TextBox CssClass="textbox" ID="txtLogoSucursal" runat="server" />
+                        <asp:TextBox CssClass="textInput" ID="txtLogoSucursal" runat="server" />
                     </div>
                     <div class="line">
                         <label>Direccion:</label>
-                        <asp:TextBox CssClass="textbox" ID="txtDireccionSucursal" runat="server" />
+                        <asp:TextBox CssClass="textInput" ID="txtDireccionSucursal" runat="server" />
                     </div>
                     <div class="line">
                         <label>Telefono:</label>
-                        <asp:TextBox CssClass="textbox" ID="txtTelefonoSucursal" runat="server" />
+                        <asp:TextBox CssClass="textInput" ID="txtTelefonoSucursal" runat="server" />
                     </div>
                 </div>
-                <div class="button1">
+                <div class="register">
                     <asp:Button ID="btnRegistrar" runat="server" OnClick="btnRegistrar_Click"
                         Text="Registrar"></asp:Button>
                     <asp:Label ID="lbResultado" runat="server"></asp:Label>
@@ -57,7 +57,7 @@
                 <div class="container">
                     <table>
                         <thead>
-                            <tr class="tablehead">
+                            <tr class="tableHead">
                                 <th class="encabezamiento">ID</th>
                                 <th class="encabezamiento">Nombre</th>
                                 <th class="encabezamiento">Logo</th>

@@ -60,7 +60,7 @@ section {
     padding-bottom: 32px;
 }
 
-.registro {
+.title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +82,7 @@ section {
     gap: 4px;
 }
 
-.button1 {
+.register {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -161,7 +161,7 @@ tr .encabezamiento {
     font-weight: bold;
 }
 
-.tablehead {
+.tableHead {
     background-color: #00B1F1;
     color: #fff;
 }
@@ -175,7 +175,7 @@ tr th {
     padding: 5px 10px;
 }
 
-.textbox {
+.textInput {
     border-radius: 8px;
     height: 40px;
     border: 1px solid #bababa;
